@@ -13,4 +13,4 @@ Python Virtual Environment: Uses .venv to manage dependencies.
 
 Dependency Management: Uses requirements.txt for easy installation.
 
-![image alt](image_https://github.com/Logeshwari0809/Resume_analyzer/blob/41bd93822ab5bdda4153e697c1de7b99bda6fa16/Screenshot%202025-04-01%20162548.png)
+![image alt](https://github.com/Logeshwari0809/Resume_analyzer/blob/41bd93822ab5bdda4153e697c1de7b99bda6fa16/Screenshot%202025-04-01%20162548.png)
