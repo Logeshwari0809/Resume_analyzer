@@ -1,4 +1,4 @@
-📄 ***Resume Analyzer***
+ # ***Resume Analyzer*** 📄 
 
 
 A Resume Analyzer that uses FastAPI for the backend and Streamlit for the frontend. Upload your resume, analyze its content, and compare it with job descriptions.
