@@ -14,4 +14,3 @@ async def analyze_resume_api(file: UploadFile = File(...), job_desc: str = ""):
         "insights": insights
     }
 
-# Run the API with: uvicorn backend.main:app --reload
