@@ -1,0 +1,12 @@
+# Backend dependencies
+fastapi
+uvicorn
+pypdf2
+spacy
+sentence-transformers
+pandas
+numpy
+
+# Frontend dependencies
+streamlit
+requests
