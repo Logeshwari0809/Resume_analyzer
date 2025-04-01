@@ -10,3 +10,4 @@ numpy
 # Frontend dependencies
 streamlit
 requests
+python-multipart
