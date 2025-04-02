@@ -6,8 +6,11 @@ spacy
 sentence-transformers
 pandas
 numpy
+python-multipart  # Required for file uploads in FastAPI
 
 # Frontend dependencies
 streamlit
 requests
-python-multipart
+
+# Deployment dependencies
+gunicorn  # Required for deploying FastAPI on Render
