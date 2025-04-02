@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from resume_parser import extract_text
 from text_analysis import analyze_resume
 import uvicorn
+import os  # ✅ Added this to read PORT from environment
 
 app = FastAPI()
 
@@ -26,6 +27,7 @@ async def analyze_resume_api(file: UploadFile = File(...), job_desc: str = ""):
         "insights": insights
     }
 
-# ✅ Run the app (For local testing)
+# ✅ Run the app (For local testing & deployment)
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=10000)
+    port = int(os.environ.get("PORT", 10000))  # Get PORT from Render
+    uvicorn.run(app, host="0.0.0.0", port=port)
