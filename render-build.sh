@@ -3,5 +3,5 @@
 # Install the spaCy model
 python -m spacy download en_core_web_sm
 
-# Run FastAPI server
-uvicorn main:app --host 0.0.0.0 --port $PORT
+# Start the FastAPI server using Gunicorn
+gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:app --bind 0.0.0.0:$PORT
