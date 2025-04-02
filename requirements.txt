@@ -14,5 +14,4 @@ python-multipart  # Required for file uploads in FastAPI
 streamlit
 requests
 
-# Deployment dependencies
-gunicorn  # Required for deploying FastAPI on Render
+
