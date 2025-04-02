@@ -14,7 +14,7 @@ if st.button("Analyze"):
         files = {"file": uploaded_file.getvalue()}
         data = {"job_desc": job_desc}
 
-        response = requests.post(API_URL, files=files, data=data)
+        response = requests.post(API_URL, files=files, data={"job_desc": job_desc})
 
         if response.status_code == 200:
             result = response.json()
