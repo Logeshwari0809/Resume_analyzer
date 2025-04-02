@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Install the spaCy model
+pip install -r requirements.txt
 python -m spacy download en_core_web_sm
 
 # Start the FastAPI server using Gunicorn
