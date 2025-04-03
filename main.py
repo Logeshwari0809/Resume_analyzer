@@ -23,5 +23,5 @@ async def analyze(text: str, job_desc: str):
     return {"match_score": match_score, "skills": skills}
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 10000))  # Use Render's assigned port
+    port = int(os.environ.get("PORT", 8000))  # Use Render's assigned port
     uvicorn.run(app, host="0.0.0.0", port=port, workers=1, timeout_keep_alive=5)
