@@ -6,6 +6,7 @@ spacy
 sentence-transformers
 pandas
 numpy
+pydantic
 pdfplumber
 spacy[en]
 python-multipart  # Required for file uploads in FastAPI
