@@ -11,4 +11,4 @@ echo "Downloading spaCy model..."
 python -m spacy download en_core_web_sm
 
 echo "Starting the application..."
-uvicorn main:app --host 0.0.0.0 --port $PORT
+exec uvicorn main:app --host 0.0.0.0 --port ${PORT:-8000} --workers 1 --timeout-keep-alive 5
