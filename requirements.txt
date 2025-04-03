@@ -2,13 +2,13 @@
 fastapi
 uvicorn
 pypdf2
-spacy
+spacy==3.8.5
+spacy-lookups-data
 sentence-transformers
 pandas
 numpy
 pydantic
 pdfplumber
-spacy[en]
 python-multipart  # Required for file uploads in FastAPI
 
 # Frontend dependencies
