@@ -23,5 +23,5 @@ async def analyze(text: str, job_desc: str):
     return {"match_score": match_score, "skills": skills}
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 8000))  # Default to 8000 if PORT is not set
+    port = int(os.environ.get("PORT", 10000))  # Default to 8000 if PORT is not set
     uvicorn.run(app, host="0.0.0.0", port=port, workers=1, timeout_keep_alive=5)
