@@ -1,12 +1,17 @@
 import spacy
 from sentence_transformers import SentenceTransformer, util
 
-# Load NLP model
-nlp = spacy.load("en_core_web_sm")
-model = SentenceTransformer('all-MiniLM-L6-v2')
+nlp = None
+model = None
 
 def analyze_resume(resume_text, job_desc):
-    """Analyzes resume text and compares it to job description."""
+    global nlp, model
+
+    if nlp is None:
+        nlp = spacy.load("en_core_web_sm")
+    if model is None:
+        model = SentenceTransformer('all-MiniLM-L6-v2')
+
     doc = nlp(resume_text)
     skills = [ent.text for ent in doc.ents if ent.label_ == "SKILL"]
 
@@ -15,3 +20,4 @@ def analyze_resume(resume_text, job_desc):
     match_score = util.cos_sim(resume_embedding, job_embedding).item()
 
     return round(match_score * 100, 2), {"skills": skills}
+
