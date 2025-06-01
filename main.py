@@ -1,14 +1,16 @@
 import os
 import uvicorn
 from fastapi import FastAPI, File, UploadFile
+from fastapi.middleware.cors import CORSMiddleware  # <--- Add this import
 from resume_parser import extract_text
 from text_analysis import analyze_resume
 
 app = FastAPI()
 
+# Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # For testing, use "*" to allow all origins; for production, specify your frontend URL
+    allow_origins=["*"],  # Allow all origins for testing, restrict in production
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
