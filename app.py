@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-API_URL = "https://resume-analyzer-1tls.onrender.com/analyze"
+API_URL = "https://resume-analyzer-1tls.onrender.com/analyze/"
 
 
 st.title("📄 Resume Analyzer")
@@ -15,7 +15,7 @@ if st.button("Analyze"):
         files = {"file": uploaded_file.getvalue()}
         data = {"job_desc": job_desc}
 
-        response = requests.post(API_URL, files=files, data=data)
+        response = requests.post(API_URL, files={"file": uploaded_file.getvalue()}, data={"job_desc": job_desc})
         
         if response.status_code == 200:
             result = response.json()
