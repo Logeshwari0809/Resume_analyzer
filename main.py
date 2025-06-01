@@ -6,6 +6,14 @@ from text_analysis import analyze_resume
 
 app = FastAPI()
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # For testing, use "*" to allow all origins; for production, specify your frontend URL
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 @app.post("/analyze/")
 async def analyze_resume_api(file: UploadFile = File(...), job_desc: str = ""):
     text = extract_text(file)
