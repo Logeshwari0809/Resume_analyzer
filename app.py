@@ -1,7 +1,8 @@
 import streamlit as st
 import requests
 
-API_URL = "https://your-backend.onrender.com/analyze"  # Replace with actual API URL
+API_URL = "https://resume-analyzer-1tls.onrender.com/analyze"
+
 
 st.title("📄 Resume Analyzer")
 
