@@ -1,6 +1,6 @@
 # Backend dependencies
 fastapi
-uvicorn
+uvicorn[standard]
 pypdf2
 spacy==3.8.5
 spacy-lookups-data
