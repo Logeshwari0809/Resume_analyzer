@@ -24,6 +24,6 @@ if st.button("Analyze"):
         else:
             st.error("❌ Error analyzing resume! Check backend logs.")
 
-        else:
-            st.warning("⚠️ Please upload a resume and enter a job description.")
+    else:
+        st.warning("⚠️ Please upload a resume and enter a job description.")
 
